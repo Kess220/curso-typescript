@@ -14,6 +14,17 @@ function showResult(result: number): void {
   if (isEven(result)) {
     console.log(`The result is ${result} and it's even!`);
   } else {
-    console.log(`The result is ${result} and it's even!`);
+    console.log(`The result is ${result} and it's odd!`);
   }
 }
+
+(() => {
+  const num1 = prompt("First Number");
+  const num2 = prompt("Second Number");
+
+  if (typeof num1 === "number" && typeof num2 === "number") {
+    let result = sum(num1, num2);
+    result += multiply(1, 2);
+    showResult(result);
+  } else console.log("Entradas inválidas");
+})();
